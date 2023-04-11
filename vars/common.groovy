@@ -6,6 +6,6 @@ def call(String stageName){
     sh "mvn sonar:sonar"
   }
   else if("${stageName}" == "Upload to Nexus"){
-    sh 'echo "Uploading to nexus"'
+    sh "mvn deploy"
   }
 }
